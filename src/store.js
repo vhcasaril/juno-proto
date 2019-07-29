@@ -1,11 +1,23 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import Md5 from "md5";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {}
+  state: {
+    SEARCH_DETAILS: ""
+  },
+  getters: {
+    GET_SEARCH_DETAILS: state => state.SEARCH_DETAILS
+  },
+  mutations: {
+    SET_SEARCH_DETAILS(state, data) {
+      state.SEARCH_DETAILS = data;
+    }
+  },
+  actions: {
+    setDetailsOfSearch({ commit }, data) {
+      commit("setDetailsOfSearch", data);
+    }
+  }
 });
