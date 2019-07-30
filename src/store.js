@@ -14,7 +14,7 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_ITEM_DETAILS(state, data) {
-      state.SEARCH_DETAILS = data;
+      state.ITEM_DETAILS = data;
     },
     SET_SEARCH_LIST(state, data) {
       state.SEARCH_LIST = data;

@@ -1,9 +1,8 @@
 <template>
   <v-app>
     <Header />
-    <v-content>
+    <v-content class="background-panel">
       <keep-alive>
-      
         <router-view />
       </keep-alive>
     </v-content>
@@ -24,7 +23,4 @@ export default {
 };
 </script>
 <style>
-@import "https://raw.githubusercontent.com/daneden/animate.css/master/animate.css";
-
-
 </style>
