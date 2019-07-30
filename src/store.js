@@ -5,19 +5,30 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    SEARCH_DETAILS: ""
+    ITEM_DETAILS: "",
+    SEARCH_LIST: []
   },
   getters: {
-    GET_SEARCH_DETAILS: state => state.SEARCH_DETAILS
+    GET_ITEM_DETAILS: state => state.ITEM_DETAILS,
+    GET_SEARCH_LIST: state => state.SEARCH_LIST
   },
   mutations: {
-    SET_SEARCH_DETAILS(state, data) {
+    SET_ITEM_DETAILS(state, data) {
       state.SEARCH_DETAILS = data;
+    },
+    SET_SEARCH_LIST(state, data) {
+      state.SEARCH_LIST = data;
     }
   },
   actions: {
-    setDetailsOfSearch({ commit }, data) {
-      commit("setDetailsOfSearch", data);
+    setDetailsOfItem({ commit }, data) {
+      return new Promise((resolve, reject) => {
+        commit("SET_ITEM_DETAILS", data);
+        resolve();
+      });
+    },
+    setListSearch({ commit }, data) {
+      commit("SET_SEARCH_LIST", data);
     }
   }
 });

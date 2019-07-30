@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+ <transition name="slide">
+  <v-container >
+    Details
+  </v-container>
+   </transition>
 </template>
+
+<script>
+
+// export default {
+//   components: {
+//   },
+//    data: () => ({}),
+//   computed: {
+//     ...mapGetters(["GET_ITEM_DETAILS"]),
+//   }
+// };
+</script>

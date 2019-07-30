@@ -14,7 +14,7 @@
       </v-container>
     </v-dialog>
     <v-layout align-start justify-center row>
-      <v-flex xs12>
+      <v-flex xl6 lg6 md8 sm12 xs12>
         <v-text-field
           solo
           autofocus
@@ -41,7 +41,6 @@ export default {
   mounted: {},
   methods: {
     doSearch: function() {
-      console.log(process.env.VUE_APP_API);
       this.loading = true;
       const hashForURI = Md5(
         "1" + process.env.VUE_APP_PRIVATE_KEY + process.env.VUE_APP_PUBLIC_KEY
@@ -57,9 +56,9 @@ export default {
             this.searchText
         )
         .then(res => {
+          console.log(res.data.data.results);
           this.loading = false;
-          console.log("resultado");
-          console.log(res);
+          this.$store.dispatch("setListSearch", res.data.data.results);
         });
     }
   }
