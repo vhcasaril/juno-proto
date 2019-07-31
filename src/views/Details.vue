@@ -16,7 +16,7 @@
           </v-expansion-panel>
              <v-expansion-panel
           >
-            <v-expansion-panel-header class="title">Appearences</v-expansion-panel-header>
+            <v-expansion-panel-header class="title">Appearances</v-expansion-panel-header>
             <v-expansion-panel-content class="mt-3 body-1">
              <h3 class="ml-3 body-1">Comics: {{ this.GET_ITEM_DETAILS.comics.available }}</h3>
           <h3 class="ml-3 mt-1 body-1">Series: {{ this.GET_ITEM_DETAILS.series.available }}</h3>
@@ -55,11 +55,6 @@ export default {
 .v-image {
   border-radius: 5px;
 }
-.background-panel{
-  background-color:#F5F5F6;
-  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
-}
-
 @media (max-width: 500px) {
   .v-image {
     max-width: 300px !important;

@@ -4,7 +4,6 @@
       <v-flex xl6 lg6 md8 sm12 xs12>
         <v-list three-line v-if="listSorted.length > 0">
           <template v-for="item in listSorted">
-            <!-- <v-list-tile :key="item.full_name" @click="routeToDetails(item.url)"> -->
             <v-list-item :key="item.name" @click="routeToDetails(item)">
               <v-list-item-avatar size="80">
                 <v-img :src="returnImgPath(item)"></v-img>
