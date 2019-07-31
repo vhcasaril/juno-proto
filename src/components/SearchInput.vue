@@ -13,7 +13,7 @@
         </v-layout>
       </v-container>
     </v-dialog>
-    <v-layout align-start justify-center row>
+    <v-layout align-start justify-center row class="mt-3">
       <v-flex xl6 lg6 md8 sm12 xs12>
         <v-text-field
           solo
